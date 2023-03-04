@@ -1,37 +1,22 @@
 import { Contacts } from 'pages/Contacts';
 import { HomePage } from 'pages/HomePage';
 import { Login } from 'pages/Login';
+import { NotFound } from 'pages/NotFound';
 import { Register } from 'pages/Register';
 import { useEffect } from 'react';
-import { Toaster } from 'react-hot-toast';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
-import { fetchContacts } from 'redux/contacts/operations';
-import { selectError, selectIsLoading } from 'redux/contacts/selectors';
+import { refreshUser } from 'redux/auth/operations';
 import { ROUTES } from 'utils/routes';
-import { Box } from './Box/Box.styled';
-import { ContactForm } from './ContactForm/ContactForm';
-import { ContactsList } from './ContactsList/ContactsList';
-import { Filter } from './Filter/Filter';
-import { Header } from './Header/Header';
-import { Loader } from './Loader/Loader';
 import { PrivateRoute } from './PrivateRoute';
 import { RestrictedRoute } from './RestrictedRoute';
 import { SharedLayout } from './SharedLayout';
-import { Title } from './Title/Title';
-
-const TITLES = {
-  form: 'Phonebook',
-  contacts: 'Contacts',
-};
 
 export const App = () => {
-  const isLoading = useSelector(selectIsLoading);
-  const error = useSelector(selectError);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchContacts());
+    dispatch(refreshUser());
   }, [dispatch]);
 
   return (
@@ -63,17 +48,7 @@ export const App = () => {
           }
         />
       </Route>
+      <Route path="*" element={<NotFound />} />
     </Routes>
-
-    // <Box>
-    //   <Header />
-    //   <Title title={TITLES.form} />
-    //   <ContactForm />
-    //   <Title title={TITLES.contacts} />
-    //   <Filter />
-    //   {isLoading && !error && <Loader />}
-    //   <ContactsList />
-    //   <Toaster />
-    // </Box>
   );
 };

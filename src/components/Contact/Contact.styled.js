@@ -20,6 +20,12 @@ export const Button = styled.button`
   &:active {
     background-color: #f3f5ce;
   }
+
+  &:disabled {
+    background-color: gray;
+    color: #fff;
+    cursor: not-allowed;
+  }
 `;
 
 export const ToastForm = styled(Form)`
