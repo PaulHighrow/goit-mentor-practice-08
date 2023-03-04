@@ -2,11 +2,11 @@ import PropTypes from 'prop-types';
 import * as yup from 'yup';
 import { toast } from 'react-hot-toast';
 import { useDispatch, useSelector } from 'react-redux';
-import { deleteContact, editContact } from 'redux/operations';
+import { deleteContact, editContact } from 'redux/contacts/operations';
 import { Text, Button, ToastForm, ToastInput } from './Contact.styled';
 import { Formik } from 'formik';
 import { Error } from 'components/ContactForm/ContactForm.styled';
-import { selectContacts } from 'redux/selectors';
+import { selectContacts } from 'redux/contacts/selectors';
 
 let schema = yup.object().shape({
   name: yup

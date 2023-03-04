@@ -1,10 +1,10 @@
-import * as yup from 'yup';
 import { Formik } from 'formik';
-import { StyledForm, Label, Input, Error, Button } from './ContactForm.styled';
-import { useDispatch, useSelector } from 'react-redux';
 import { toast } from 'react-hot-toast';
-import { selectContacts } from 'redux/selectors';
-import { addContact } from 'redux/operations';
+import { useDispatch, useSelector } from 'react-redux';
+import { addContact } from 'redux/contacts/operations';
+import { selectContacts } from 'redux/contacts/selectors';
+import * as yup from 'yup';
+import { Button, Error, Input, Label, StyledForm } from './ContactForm.styled';
 
 let schema = yup.object().shape({
   name: yup
