@@ -1,14 +1,16 @@
-.header {
+import styled from 'styled-components';
+
+export const StyledHeader = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 16px;
   border-bottom: 1px solid #2a363b;
   padding: 20px;
-}
+`;
 
-.auth {
+export const Auth = styled.div`
   display: flex;
   gap: 20px;
   align-items: center;
-}
+`;
