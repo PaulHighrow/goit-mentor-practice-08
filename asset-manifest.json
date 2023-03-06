@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/goit-mentor-practice-08/static/css/main.29ee4cd0.css",
-    "main.js": "/goit-mentor-practice-08/static/js/main.5bbb4253.js",
+    "main.css": "/goit-mentor-practice-08/static/css/main.6e0ac249.css",
+    "main.js": "/goit-mentor-practice-08/static/js/main.4cb82e92.js",
     "index.html": "/goit-mentor-practice-08/index.html",
-    "main.29ee4cd0.css.map": "/goit-mentor-practice-08/static/css/main.29ee4cd0.css.map",
-    "main.5bbb4253.js.map": "/goit-mentor-practice-08/static/js/main.5bbb4253.js.map"
+    "main.6e0ac249.css.map": "/goit-mentor-practice-08/static/css/main.6e0ac249.css.map",
+    "main.4cb82e92.js.map": "/goit-mentor-practice-08/static/js/main.4cb82e92.js.map"
   },
   "entrypoints": [
-    "static/css/main.29ee4cd0.css",
-    "static/js/main.5bbb4253.js"
+    "static/css/main.6e0ac249.css",
+    "static/js/main.4cb82e92.js"
   ]
 }
